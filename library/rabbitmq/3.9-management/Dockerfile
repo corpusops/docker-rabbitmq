@@ -1,4 +1,4 @@
-FROM library/rabbitmq:management-alpine
+FROM library/rabbitmq:3.9-management
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG INSTALL_DEFAULT_LOCALE="fr_FR.UTF-8"
