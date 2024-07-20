@@ -77,7 +77,7 @@ ADD \
     /etc/supervisor.d/
 ADD rootfs/etc/logrotate.conf /etc/
 ADD rootfs/etc/logrotate.d/* /etc/logrotate.d/
-ADD helpers/*_clean.sh /tmp/corpusopssteroids/
+ADD helpers/system_detect.sh helpers/*_clean.sh /tmp/corpusopssteroids/
 RUN sh -c 'set -ex \
     && echo fixperms >&2 \
     && ( chmod -vf g-wx,o-wx /etc/logrotate.d/* /etc/logrotate.conf || true ) \
@@ -86,5 +86,6 @@ RUN sh -c 'set -ex \
     && chmod +x *sh \
     && _cops_SYSTEM=$(./system_detect.sh) \
     && ./${_cops_SYSTEM}_clean.sh \
+    && ./common_clean.sh \
     && cd / && rm -rf /tmp/corpusopssteroids /var/cache/apk/* /var/lib/apt/lists/*'
 LABEL com.github.corpusops.docker-images-commit="$DOCKER_IMAGES_COMMIT"

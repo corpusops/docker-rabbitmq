@@ -18,6 +18,14 @@
 3.9-alpine
 3.9-management
 3.9-management-alpine
+3.10
+3.10-alpine
+3.10-management
+3.10-management-alpine
+3.11
+3.11-alpine
+3.11-management
+3.11-management-alpine
 alpine
 latest
 management
