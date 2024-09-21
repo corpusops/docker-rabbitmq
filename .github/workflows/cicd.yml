@@ -65,7 +65,8 @@ jobs:
       fail-fast: false
       matrix:
         IMAGES:
-        - "library/rabbitmq/3 library/rabbitmq/3-alpine library/rabbitmq/3-management library/rabbitmq/3-management-alpine library/rabbitmq/alpine library/rabbitmq/latest library/rabbitmq/management library/rabbitmq/management-alpine"
+        - "library/rabbitmq/alpine library/rabbitmq/latest library/rabbitmq/management library/rabbitmq/management-alpine"
+        - "library/rabbitmq/4 library/rabbitmq/4-alpine library/rabbitmq/4-management library/rabbitmq/3-alpine library/rabbitmq/3-management library/rabbitmq/3-management-alpine"
         #- "corpusops/test/a corpusops/test/b corpusops/test/c"
         # all images that werent explicitly told to be built would be built in the next batches
         # we span them onto N jobs
